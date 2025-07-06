@@ -599,5 +599,11 @@ namespace VirusGuard
             Setting setting = new Setting();
             setting.Show();
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            FAQ faq = new FAQ();
+            faq.Show();
+        }
     }
 }

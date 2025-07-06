@@ -362,6 +362,7 @@ namespace VirusGuard
             guna2Button4.TabIndex = 20;
             guna2Button4.Text = "FAQ";
             guna2Button4.TextAlign = HorizontalAlignment.Left;
+            guna2Button4.Click += guna2Button4_Click;
             // 
             // guna2Panel4
             // 
