@@ -93,11 +93,11 @@ namespace VirusGuard
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Engravers MT", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkCyan;
-            label1.Location = new Point(317, 17);
+            label1.Location = new Point(419, -1);
             label1.Name = "label1";
-            label1.Size = new Size(307, 35);
+            label1.Size = new Size(188, 35);
             label1.TabIndex = 5;
-            label1.Text = "Virus Guard";
+            label1.Text = "Medusa";
             label1.Click += label1_Click;
             // 
             // richTextBox1
@@ -362,6 +362,7 @@ namespace VirusGuard
             guna2Button4.TabIndex = 20;
             guna2Button4.Text = "FAQ";
             guna2Button4.TextAlign = HorizontalAlignment.Left;
+            guna2Button4.Click += guna2Button4_Click;
             // 
             // guna2Panel4
             // 
