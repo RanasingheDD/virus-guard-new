@@ -116,7 +116,7 @@ namespace VirusGuard
 
                 try
                 {
-                    // Step 1: Save DetectedLogs to database
+                    //// Step 1: Save DetectedLogs to database
                     //using (SqlConnection conn = new SqlConnection("Data Source=192.168.40.136;Initial Catalog=VirusDB;Persist Security Info=True;User ID=SA;Password=Madushan2002@;"))
                     //{
                     //    conn.Open();
@@ -164,7 +164,7 @@ namespace VirusGuard
                     // Prepare the data source
                     var bindingSource = new BindingSource { DataSource = Form1.DetectedLogs };
 
-                    var reportDataSource = new Microsoft.Reporting.WinForms.ReportDataSource("LogDataSet", bindingSource);
+                    var reportDataSource = new Microsoft.Reporting.WinForms.ReportDataSource("LogDataSet", Form1.DetectedLogs);
 
                     viewer.LocalReport.DataSources.Clear();
                     viewer.LocalReport.DataSources.Add(reportDataSource);
