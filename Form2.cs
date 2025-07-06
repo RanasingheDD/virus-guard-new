@@ -1,9 +1,12 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
+using static VirusGuard.Form1;
+
 
 namespace VirusGuard
 {
@@ -102,10 +105,6 @@ namespace VirusGuard
 
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
         private void export_Click(object sender, EventArgs e)
         {
             using (Form reportForm = new Form())
@@ -117,6 +116,43 @@ namespace VirusGuard
 
                 try
                 {
+                    // Step 1: Save DetectedLogs to database
+                    //using (SqlConnection conn = new SqlConnection("Data Source=192.168.40.136;Initial Catalog=VirusDB;Persist Security Info=True;User ID=SA;Password=Madushan2002@;"))
+                    //{
+                    //    conn.Open();
+                    //    foreach (var log in Form1.DetectedLogs)
+                    //    {
+                    //        using (SqlCommand cmd = new SqlCommand("INSERT INTO DetectionDetails (ScanType, FilePath, DetectionType, DetectionDate) VALUES (@ScanType, @FilePath, @DetectionType, @DetectionDate)", conn))
+                    //        {
+                    //            cmd.Parameters.AddWithValue("@ScanType", log.ScanType);
+                    //            cmd.Parameters.AddWithValue("@FilePath", log.FilePath);
+                    //            cmd.Parameters.AddWithValue("@DetectionType", log.DetectionType);
+                    //            cmd.Parameters.AddWithValue("@DetectionDate", log.Date);
+                    //            cmd.ExecuteNonQuery();
+                    //        }
+                    //    }
+                    //}
+
+                    //// Step 2: Fetch from DB and prepare for report
+                    //List<VirusLog> reportLogs = new List<VirusLog>();
+                    //using (SqlConnection conn = new SqlConnection("your_connection_string_here"))
+                    //{
+                    //    conn.Open();
+                    //    using (SqlCommand cmd = new SqlCommand("SELECT ScanType, FilePath, DetectionType, DetectionDate FROM DetectionDetails", conn))
+                    //    using (SqlDataReader reader = cmd.ExecuteReader())
+                    //    {
+                    //        while (reader.Read())
+                    //        {
+                    //            reportLogs.Add(new VirusLog
+                    //            {
+                    //                ScanType = reader["FileName"].ToString(),
+                    //                FilePath = reader["FilePath"].ToString(),
+                    //                DetectionType = reader["DetectedHash"].ToString(),
+                    //                Date = reader["DetectionDate"].ToString()
+                    //            });
+                    //        }
+                    //    }
+                    //}
                     var viewer = new ReportViewer
                     {
                         Dock = DockStyle.Fill,
