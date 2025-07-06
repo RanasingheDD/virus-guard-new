@@ -323,6 +323,7 @@ namespace VirusGuard
             progressBar1.Invoke(new Action(() =>
             {
                 progressBar1.Value = 0;
+                clear.Visible = false;
                 label2.Visible = false;
                 progressBar1.Visible = true;
                 richTextBox1.Visible = true;
@@ -398,7 +399,7 @@ namespace VirusGuard
                         {
                             threatCount++;
                             //action_required.Visible = true;
-                            
+
                         }
 
                         scannedFiles++;
@@ -411,6 +412,7 @@ namespace VirusGuard
 
                     SafeAppendText($"\n{scanType} completed.\n");
                     SafeAppendText($"\n{scanType} completed. Threats found: {threatCount}\n");
+                    clear.Visible = true;
 
                 }, token);
             }
@@ -527,6 +529,7 @@ namespace VirusGuard
         private void clear_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+            clear.Visible = false;
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -601,6 +604,11 @@ namespace VirusGuard
         {
             FAQ faq = new FAQ();
             faq.Show();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
