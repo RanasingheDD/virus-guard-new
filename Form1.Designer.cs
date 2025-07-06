@@ -38,8 +38,6 @@ namespace VirusGuard
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -56,6 +54,8 @@ namespace VirusGuard
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             richTextBox1 = new RichTextBox();
@@ -71,7 +71,6 @@ namespace VirusGuard
             Scan = new Label();
             action_required = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
@@ -80,6 +79,7 @@ namespace VirusGuard
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             guna2Panel5.SuspendLayout();
             guna2Panel4.SuspendLayout();
@@ -92,8 +92,8 @@ namespace VirusGuard
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Engravers MT", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.DarkCyan;
-            label1.Location = new Point(419, -1);
+            label1.ForeColor = Color.FromArgb(10, 179, 0);
+            label1.Location = new Point(433, -1);
             label1.Name = "label1";
             label1.Size = new Size(188, 35);
             label1.TabIndex = 5;
@@ -144,6 +144,7 @@ namespace VirusGuard
             clear.TabIndex = 9;
             clear.Text = "Clear";
             clear.UseVisualStyleBackColor = false;
+            clear.Visible = false;
             clear.Click += clear_Click;
             // 
             // btnStop
@@ -309,24 +310,6 @@ namespace VirusGuard
             guna2Panel1.Size = new Size(165, 547);
             guna2Panel1.TabIndex = 22;
             // 
-            // guna2Button5
-            // 
-            guna2Button5.CustomizableEdges = customizableEdges7;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.FillColor = Color.FromArgb(0, 249, 76);
-            guna2Button5.Font = new Font("Segoe UI", 9F);
-            guna2Button5.ForeColor = Color.White;
-            guna2Button5.Image = Properties.Resources.Leonardo_Phoenix_10_Create_an_image_for_antivirus_software_tha_2;
-            guna2Button5.ImageSize = new Size(129, 97);
-            guna2Button5.Location = new Point(12, 11);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button5.Size = new Size(129, 97);
-            guna2Button5.TabIndex = 20;
-            // 
             // guna2Panel5
             // 
             guna2Panel5.Controls.Add(guna2Button4);
@@ -471,6 +454,26 @@ namespace VirusGuard
             guna2Button1.Text = "Home";
             guna2Button1.TextAlign = HorizontalAlignment.Left;
             // 
+            // guna2Button5
+            // 
+            guna2Button5.BackgroundImageLayout = ImageLayout.Stretch;
+            guna2Button5.CustomizableEdges = customizableEdges7;
+            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button5.FillColor = Color.FromArgb(10, 149, 0);
+            guna2Button5.Font = new Font("Segoe UI", 9F);
+            guna2Button5.ForeColor = Color.White;
+            guna2Button5.Image = Properties.Resources.Untitled_design__4_;
+            guna2Button5.ImageSize = new Size(129, 97);
+            guna2Button5.Location = new Point(0, 11);
+            guna2Button5.Name = "guna2Button5";
+            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button5.Size = new Size(165, 130);
+            guna2Button5.TabIndex = 20;
+            guna2Button5.Click += guna2Button5_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -522,7 +525,6 @@ namespace VirusGuard
         private Label Scan;
         private Label action_required;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
@@ -531,5 +533,6 @@ namespace VirusGuard
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
     }
 }
