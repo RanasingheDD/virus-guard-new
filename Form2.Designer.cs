@@ -35,7 +35,10 @@
             delete = new Button();
             virusTotal = new Button();
             label2 = new Label();
+            pictureBox1 = new PictureBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -116,12 +119,36 @@
             label2.TabIndex = 8;
             label2.Text = "History";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = Properties.Resources.Untitled_design__4_;
+            pictureBox1.Location = new Point(12, 94);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(128, 109);
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Lato Black", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(10, 149, 0);
+            label3.Location = new Point(31, 215);
+            label3.Name = "label3";
+            label3.Size = new Size(87, 25);
+            label3.TabIndex = 10;
+            label3.Text = "Medusa";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(44, 44, 44);
             ClientSize = new Size(709, 543);
+            Controls.Add(label3);
+            Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(virusTotal);
             Controls.Add(delete);
@@ -134,6 +161,7 @@
             Text = "History";
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,5 +174,7 @@
         private Button delete;
         private Button virusTotal;
         private Label label2;
+        private PictureBox pictureBox1;
+        private Label label3;
     }
 }
