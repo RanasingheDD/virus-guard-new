@@ -118,10 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblAnswer1.Text" xml:space="preserve">
-    <value>Virus Guard is a lightweight antivirus and system protection tool developed to detect, quarantine, and remove potential threats on your Windows system. It provides real-time protection and customizable scanning options.
+    <value>Medusa is a lightweight antivirus and system protection tool developed to detect, quarantine, and remove potential threats on your Windows system. It provides real-time protection and customizable scanning options.
 </value>
   </data>
-  <metadata name="faqTimer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
