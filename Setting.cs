@@ -22,6 +22,7 @@ namespace VirusGuard
         public Setting()
         {
             InitializeComponent();
+            LoadSettings();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,6 +35,32 @@ namespace VirusGuard
             guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
             guna2DateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
+
+        private void LoadSettings()
+        {
+            guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
+            guna2DateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+
+            string path = "settings.txt";
+            if (File.Exists(path))
+            {
+                try
+                {
+                    string[] lines = File.ReadAllLines(path);
+                    if (lines.Length >= 3)
+                    {
+                        guna2CheckBox2.Checked = bool.Parse(lines[0]);
+                        guna2ToggleSwitch1.Checked = bool.Parse(lines[1]);
+                        guna2DateTimePicker1.Value = DateTime.Parse(lines[2]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to load settings:\n" + ex.Message);
+                }
+            }
+        }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -107,6 +134,7 @@ namespace VirusGuard
             ;
         }
 
+
         private void SetStartup(bool enable)
         {
             string appName = "VirusGuard"; // Name you want in startup registry
@@ -133,12 +161,26 @@ namespace VirusGuard
 
         private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2ToggleSwitch1_CheckedChanged_1(object sender, EventArgs e)
         {
             SetStartup(guna2ToggleSwitch1.Checked);
         }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            string path = "settings.txt";
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                writer.WriteLine(guna2CheckBox2.Checked);         // sound checkbox
+                writer.WriteLine(guna2ToggleSwitch1.Checked);     // startup
+                writer.WriteLine(guna2DateTimePicker1.Value);     // datetime
+            }
+
+            MessageBox.Show("Settings saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }
