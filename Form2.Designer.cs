@@ -73,8 +73,8 @@
             // 
             // export
             // 
-            export.BackColor = Color.FromArgb(0, 229, 76);
-            export.FlatAppearance.BorderColor = Color.FromArgb(0, 229, 76);
+            export.BackColor = Color.FromArgb(10, 149, 0);
+            export.FlatAppearance.BorderColor = Color.FromArgb(10, 149, 0);
             export.FlatAppearance.BorderSize = 3;
             export.FlatStyle = FlatStyle.Flat;
             export.Font = new Font("Lato Black", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -89,8 +89,8 @@
             // 
             // delete
             // 
-            delete.BackColor = Color.FromArgb(0, 229, 76);
-            delete.FlatAppearance.BorderColor = Color.FromArgb(0, 229, 76);
+            delete.BackColor = Color.FromArgb(10, 149, 0);
+            delete.FlatAppearance.BorderColor = Color.FromArgb(10, 149, 0);
             delete.FlatStyle = FlatStyle.Flat;
             delete.Font = new Font("Lato Black", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             delete.ForeColor = Color.Black;

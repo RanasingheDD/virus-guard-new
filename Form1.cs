@@ -14,6 +14,8 @@ namespace VirusGuard
         private CancellationTokenSource scanCancellationTokenSource;
         private ManagementEventWatcher usbWatcher;
         public static List<VirusLog> DetectedLogs = new List<VirusLog>();
+       public Label ActionLabel => action_required;
+
         public class VirusLog
         {
             public string ScanType { get; set; }
@@ -315,6 +317,11 @@ namespace VirusGuard
                 richTextBox1.Visible = true;
                 Scan.Visible = true;
                 btnStop.Visible = true;
+                action_required.Visible = false;
+                guna2TileButton1.Visible = false;
+                guna2TileButton2.Visible = false;
+                guna2TileButton3.Visible = false;
+                label3.Visible = false;
             }));
 
             label1.Visible = false;
@@ -379,6 +386,7 @@ namespace VirusGuard
                         if (foundThreat)
                         {
                             threatCount++;
+                            //action_required.Visible = true;
                         }
 
                         scannedFiles++;
@@ -409,16 +417,21 @@ namespace VirusGuard
                     Scan.Visible = false;
                     label2.Visible = true;
                     btnStop.Visible = false;
+                    guna2TileButton1.Visible = true;
+                    guna2TileButton2.Visible = true;
+                    guna2TileButton3.Visible = true;
+                    label3.Visible = true;
+
                 }));
+                if (DetectedLogs.Count > 0) {
+                    action_required.Visible = true;
+                }
                 MessageBox.Show($"Scan completed.\nThreats found: {threatCount}", "Scan Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
         private void SetScanButtonsEnabled(bool enabled)
         {
-            btnQuickScan.Enabled = enabled;
-            btnFullScan.Enabled = enabled;
-            btnCustomScan.Enabled = enabled;
             btnToggleRealTime.Enabled = enabled;
             btnStop.Enabled = !enabled;
         }
@@ -505,6 +518,10 @@ namespace VirusGuard
 
         private void btnStop_Click(object sender, EventArgs e)
         {
+            if (DetectedLogs.Count > 0) {
+                action_required.Visible = true;
+            }
+
             scanCancellationTokenSource?.Cancel();
             StopRealTimeProtection();
             realTimeEnabled = false;
@@ -515,14 +532,14 @@ namespace VirusGuard
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(this);
             form2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             //Setting setting = new Setting();
-           // setting.Show();
+            // setting.Show();
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -540,6 +557,11 @@ namespace VirusGuard
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void action_required_Click(object sender, EventArgs e)
         {
 
         }

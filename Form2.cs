@@ -9,9 +9,13 @@ namespace VirusGuard
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private Form1 mainForm;
+
+
+        public Form2(Form1 form)
         {
             InitializeComponent();
+            this.mainForm = form;
 
             // Initially disable delete button
             delete.Enabled = false;
@@ -155,7 +159,11 @@ namespace VirusGuard
                     {
                         try
                         {
+                            mainForm.ActionLabel.Visible = false;
                             System.IO.File.Delete(path);
+                            
+
+
                         }
                         catch (Exception ex)
                         {

@@ -37,10 +37,7 @@ namespace VirusGuard
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            btnQuickScan = new Button();
-            btnFullScan = new Button();
             label1 = new Label();
-            btnCustomScan = new Button();
             richTextBox1 = new RichTextBox();
             btnToggleRealTime = new Button();
             clear = new Button();
@@ -53,36 +50,8 @@ namespace VirusGuard
             label3 = new Label();
             progressBar1 = new ProgressBar();
             Scan = new Label();
+            action_required = new Label();
             SuspendLayout();
-            // 
-            // btnQuickScan
-            // 
-            btnQuickScan.BackColor = Color.Green;
-            btnQuickScan.Cursor = Cursors.Hand;
-            btnQuickScan.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnQuickScan.ForeColor = SystemColors.HighlightText;
-            btnQuickScan.Location = new Point(45, 444);
-            btnQuickScan.Margin = new Padding(3, 2, 3, 2);
-            btnQuickScan.Name = "btnQuickScan";
-            btnQuickScan.Size = new Size(94, 29);
-            btnQuickScan.TabIndex = 0;
-            btnQuickScan.Text = "Quick Scan";
-            btnQuickScan.UseVisualStyleBackColor = false;
-            // 
-            // btnFullScan
-            // 
-            btnFullScan.BackColor = Color.Black;
-            btnFullScan.Cursor = Cursors.Hand;
-            btnFullScan.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnFullScan.ForeColor = SystemColors.HighlightText;
-            btnFullScan.Location = new Point(160, 444);
-            btnFullScan.Margin = new Padding(3, 2, 3, 2);
-            btnFullScan.Name = "btnFullScan";
-            btnFullScan.Size = new Size(82, 29);
-            btnFullScan.TabIndex = 2;
-            btnFullScan.Text = "Full Scan";
-            btnFullScan.UseVisualStyleBackColor = false;
-            //btnFullScan.Click += btnFullScan_Click_1;
             // 
             // label1
             // 
@@ -96,39 +65,25 @@ namespace VirusGuard
             label1.TabIndex = 5;
             label1.Text = "Virus Guard";
             // 
-            // btnCustomScan
-            // 
-            btnCustomScan.BackColor = Color.LightSeaGreen;
-            btnCustomScan.Cursor = Cursors.Hand;
-            btnCustomScan.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCustomScan.ForeColor = SystemColors.HighlightText;
-            btnCustomScan.Location = new Point(12, 172);
-            btnCustomScan.Margin = new Padding(3, 2, 3, 2);
-            btnCustomScan.Name = "btnCustomScan";
-            btnCustomScan.Size = new Size(117, 29);
-            btnCustomScan.TabIndex = 6;
-            btnCustomScan.Text = "Custom Scan";
-            btnCustomScan.UseVisualStyleBackColor = false;
-            //btnCustomScan.Click += btnCustomScan_Click_1;
-            // 
             // richTextBox1
             // 
             richTextBox1.Font = new Font("Lato", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            richTextBox1.Location = new Point(191, 177);
+            richTextBox1.Location = new Point(138, 177);
             richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.MaxLength = 200;
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(487, 33);
+            richTextBox1.Size = new Size(646, 259);
             richTextBox1.TabIndex = 7;
             richTextBox1.Text = "";
             richTextBox1.Visible = false;
-            //richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // btnToggleRealTime
             // 
-            btnToggleRealTime.BackColor = Color.Olive;
+            btnToggleRealTime.BackColor = Color.FromArgb(10, 149, 0);
             btnToggleRealTime.Cursor = Cursors.Hand;
+            btnToggleRealTime.FlatAppearance.BorderColor = Color.FromArgb(10, 149, 0);
+            btnToggleRealTime.FlatStyle = FlatStyle.Flat;
             btnToggleRealTime.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnToggleRealTime.ForeColor = SystemColors.HighlightText;
             btnToggleRealTime.Location = new Point(630, 50);
@@ -143,6 +98,8 @@ namespace VirusGuard
             // 
             clear.BackColor = Color.DarkOrange;
             clear.Cursor = Cursors.Hand;
+            clear.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            clear.FlatStyle = FlatStyle.Flat;
             clear.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             clear.ForeColor = SystemColors.HighlightText;
             clear.Location = new Point(702, 449);
@@ -186,7 +143,7 @@ namespace VirusGuard
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Lato", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(0, 229, 76);
+            label2.ForeColor = Color.FromArgb(10, 149, 0);
             label2.Location = new Point(189, 118);
             label2.Name = "label2";
             label2.Size = new Size(489, 57);
@@ -207,7 +164,7 @@ namespace VirusGuard
             guna2TileButton3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2TileButton3.FillColor = Color.FromArgb(44, 44, 44);
             guna2TileButton3.Font = new Font("Lato Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TileButton3.ForeColor = Color.White;
+            guna2TileButton3.ForeColor = Color.FromArgb(10, 149, 0);
             guna2TileButton3.HoverState.BorderColor = Color.DimGray;
             guna2TileButton3.HoverState.FillColor = Color.DimGray;
             guna2TileButton3.Location = new Point(598, 215);
@@ -230,7 +187,7 @@ namespace VirusGuard
             guna2TileButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2TileButton1.FillColor = Color.FromArgb(44, 44, 44);
             guna2TileButton1.Font = new Font("Lato Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TileButton1.ForeColor = Color.White;
+            guna2TileButton1.ForeColor = Color.FromArgb(10, 149, 0);
             guna2TileButton1.HoverState.BorderColor = Color.DimGray;
             guna2TileButton1.HoverState.FillColor = Color.DimGray;
             guna2TileButton1.Location = new Point(138, 215);
@@ -254,7 +211,7 @@ namespace VirusGuard
             guna2TileButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2TileButton2.FillColor = Color.FromArgb(44, 44, 44);
             guna2TileButton2.Font = new Font("Lato Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TileButton2.ForeColor = Color.White;
+            guna2TileButton2.ForeColor = Color.FromArgb(10, 149, 0);
             guna2TileButton2.HoverState.BorderColor = Color.DimGray;
             guna2TileButton2.HoverState.FillColor = Color.DimGray;
             guna2TileButton2.Location = new Point(373, 215);
@@ -271,7 +228,7 @@ namespace VirusGuard
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(0, 229, 76);
+            label3.ForeColor = Color.FromArgb(10, 149, 0);
             label3.Location = new Point(389, 337);
             label3.Name = "label3";
             label3.Size = new Size(125, 86);
@@ -299,6 +256,19 @@ namespace VirusGuard
             Scan.Text = "Scanning .....";
             Scan.Visible = false;
             // 
+            // action_required
+            // 
+            action_required.AutoSize = true;
+            action_required.Font = new Font("Lato", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            action_required.ForeColor = Color.FromArgb(229, 15, 0);
+            action_required.Location = new Point(191, 112);
+            action_required.Name = "action_required";
+            action_required.Size = new Size(488, 63);
+            action_required.TabIndex = 21;
+            action_required.Text = "⚠ Action Required";
+            action_required.Visible = false;
+            action_required.Click += action_required_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -306,6 +276,7 @@ namespace VirusGuard
             BackColor = Color.FromArgb(44, 44, 44);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(909, 489);
+            Controls.Add(action_required);
             Controls.Add(Scan);
             Controls.Add(progressBar1);
             Controls.Add(label3);
@@ -318,10 +289,7 @@ namespace VirusGuard
             Controls.Add(clear);
             Controls.Add(btnToggleRealTime);
             Controls.Add(richTextBox1);
-            Controls.Add(btnCustomScan);
             Controls.Add(label1);
-            Controls.Add(btnFullScan);
-            Controls.Add(btnQuickScan);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
@@ -332,11 +300,7 @@ namespace VirusGuard
         }
 
         #endregion
-
-        private Button btnQuickScan;
-        private Button btnFullScan;
         private Label label1;
-        private Button btnCustomScan;
         private RichTextBox richTextBox1;
         private Button btnToggleRealTime;
         private Button clear;
@@ -349,5 +313,6 @@ namespace VirusGuard
         private Label label3;
         private ProgressBar progressBar1;
         private Label Scan;
+        private Label action_required;
     }
 }
