@@ -62,7 +62,6 @@ namespace VirusGuard
             btnToggleRealTime = new Button();
             clear = new Button();
             btnStop = new Button();
-            button1 = new Button();
             label2 = new Label();
             guna2TileButton3 = new Guna.UI2.WinForms.Guna2TileButton();
             guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
@@ -104,7 +103,7 @@ namespace VirusGuard
             // richTextBox1
             // 
             richTextBox1.Font = new Font("Lato", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            richTextBox1.Location = new Point(182, 177);
+            richTextBox1.Location = new Point(218, 177);
             richTextBox1.Margin = new Padding(3, 2, 3, 2);
             richTextBox1.MaxLength = 200;
             richTextBox1.Name = "richTextBox1";
@@ -116,13 +115,13 @@ namespace VirusGuard
             // 
             // btnToggleRealTime
             // 
-            btnToggleRealTime.BackColor = Color.FromArgb(10, 149, 0);
+            btnToggleRealTime.BackColor = Color.FromArgb(10, 179, 0);
             btnToggleRealTime.Cursor = Cursors.Hand;
             btnToggleRealTime.FlatAppearance.BorderColor = Color.FromArgb(10, 149, 0);
             btnToggleRealTime.FlatStyle = FlatStyle.Flat;
             btnToggleRealTime.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnToggleRealTime.ForeColor = SystemColors.HighlightText;
-            btnToggleRealTime.Location = new Point(630, 50);
+            btnToggleRealTime.Location = new Point(672, 52);
             btnToggleRealTime.Margin = new Padding(3, 2, 3, 2);
             btnToggleRealTime.Name = "btnToggleRealTime";
             btnToggleRealTime.Size = new Size(225, 29);
@@ -138,7 +137,7 @@ namespace VirusGuard
             clear.FlatStyle = FlatStyle.Flat;
             clear.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             clear.ForeColor = SystemColors.HighlightText;
-            clear.Location = new Point(746, 459);
+            clear.Location = new Point(782, 490);
             clear.Margin = new Padding(3, 2, 3, 2);
             clear.Name = "clear";
             clear.Size = new Size(82, 29);
@@ -155,7 +154,7 @@ namespace VirusGuard
             btnStop.FlatStyle = FlatStyle.Flat;
             btnStop.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStop.ForeColor = SystemColors.HighlightText;
-            btnStop.Location = new Point(746, 130);
+            btnStop.Location = new Point(781, 130);
             btnStop.Margin = new Padding(3, 2, 3, 2);
             btnStop.Name = "btnStop";
             btnStop.Size = new Size(82, 29);
@@ -165,22 +164,12 @@ namespace VirusGuard
             btnStop.Visible = false;
             btnStop.Click += btnStop_Click;
             // 
-            // button1
-            // 
-            button1.Location = new Point(780, 17);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 11;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Lato", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(10, 149, 0);
-            label2.Location = new Point(224, 102);
+            label2.ForeColor = Color.FromArgb(10, 209, 0);
+            label2.Location = new Point(259, 102);
             label2.Name = "label2";
             label2.Size = new Size(489, 57);
             label2.TabIndex = 12;
@@ -191,7 +180,7 @@ namespace VirusGuard
             // 
             guna2TileButton3.BorderColor = Color.White;
             guna2TileButton3.BorderRadius = 10;
-            guna2TileButton3.BorderThickness = 1;
+            guna2TileButton3.BorderThickness = 2;
             guna2TileButton3.CustomBorderColor = Color.White;
             guna2TileButton3.CustomizableEdges = customizableEdges1;
             guna2TileButton3.DisabledState.BorderColor = Color.DarkGray;
@@ -200,10 +189,10 @@ namespace VirusGuard
             guna2TileButton3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2TileButton3.FillColor = Color.FromArgb(44, 44, 44);
             guna2TileButton3.Font = new Font("Lato Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TileButton3.ForeColor = Color.FromArgb(10, 149, 0);
+            guna2TileButton3.ForeColor = Color.FromArgb(10, 209, 0);
             guna2TileButton3.HoverState.BorderColor = Color.DimGray;
             guna2TileButton3.HoverState.FillColor = Color.DimGray;
-            guna2TileButton3.Location = new Point(642, 215);
+            guna2TileButton3.Location = new Point(678, 215);
             guna2TileButton3.Name = "guna2TileButton3";
             guna2TileButton3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TileButton3.Size = new Size(168, 171);
@@ -214,7 +203,7 @@ namespace VirusGuard
             // 
             guna2TileButton1.BorderColor = Color.White;
             guna2TileButton1.BorderRadius = 10;
-            guna2TileButton1.BorderThickness = 1;
+            guna2TileButton1.BorderThickness = 2;
             guna2TileButton1.CustomBorderColor = Color.White;
             guna2TileButton1.CustomizableEdges = customizableEdges3;
             guna2TileButton1.DisabledState.BorderColor = Color.DarkGray;
@@ -223,10 +212,10 @@ namespace VirusGuard
             guna2TileButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2TileButton1.FillColor = Color.FromArgb(44, 44, 44);
             guna2TileButton1.Font = new Font("Lato Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TileButton1.ForeColor = Color.FromArgb(10, 149, 0);
+            guna2TileButton1.ForeColor = Color.FromArgb(10, 209, 0);
             guna2TileButton1.HoverState.BorderColor = Color.DimGray;
             guna2TileButton1.HoverState.FillColor = Color.DimGray;
-            guna2TileButton1.Location = new Point(182, 215);
+            guna2TileButton1.Location = new Point(218, 215);
             guna2TileButton1.Name = "guna2TileButton1";
             guna2TileButton1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TileButton1.Size = new Size(168, 171);
@@ -238,7 +227,7 @@ namespace VirusGuard
             // 
             guna2TileButton2.BorderColor = Color.White;
             guna2TileButton2.BorderRadius = 10;
-            guna2TileButton2.BorderThickness = 1;
+            guna2TileButton2.BorderThickness = 2;
             guna2TileButton2.CustomBorderColor = Color.White;
             guna2TileButton2.CustomizableEdges = customizableEdges5;
             guna2TileButton2.DisabledState.BorderColor = Color.DarkGray;
@@ -247,10 +236,10 @@ namespace VirusGuard
             guna2TileButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2TileButton2.FillColor = Color.FromArgb(44, 44, 44);
             guna2TileButton2.Font = new Font("Lato Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2TileButton2.ForeColor = Color.FromArgb(10, 149, 0);
+            guna2TileButton2.ForeColor = Color.FromArgb(10, 209, 0);
             guna2TileButton2.HoverState.BorderColor = Color.DimGray;
             guna2TileButton2.HoverState.FillColor = Color.DimGray;
-            guna2TileButton2.Location = new Point(417, 215);
+            guna2TileButton2.Location = new Point(453, 215);
             guna2TileButton2.Name = "guna2TileButton2";
             guna2TileButton2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2TileButton2.Size = new Size(168, 171);
@@ -264,8 +253,8 @@ namespace VirusGuard
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(10, 149, 0);
-            label3.Location = new Point(433, 337);
+            label3.ForeColor = Color.FromArgb(10, 209, 0);
+            label3.Location = new Point(469, 337);
             label3.Name = "label3";
             label3.Size = new Size(125, 86);
             label3.TabIndex = 18;
@@ -273,7 +262,7 @@ namespace VirusGuard
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(226, 111);
+            progressBar1.Location = new Point(261, 111);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(487, 29);
             progressBar1.TabIndex = 19;
@@ -285,7 +274,7 @@ namespace VirusGuard
             Scan.AutoSize = true;
             Scan.Font = new Font("Lato", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Scan.ForeColor = Color.White;
-            Scan.Location = new Point(224, 82);
+            Scan.Location = new Point(259, 82);
             Scan.Name = "Scan";
             Scan.Size = new Size(77, 16);
             Scan.TabIndex = 20;
@@ -297,7 +286,7 @@ namespace VirusGuard
             action_required.AutoSize = true;
             action_required.Font = new Font("Lato", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             action_required.ForeColor = Color.FromArgb(229, 15, 0);
-            action_required.Location = new Point(226, 98);
+            action_required.Location = new Point(261, 99);
             action_required.Name = "action_required";
             action_required.Size = new Size(488, 63);
             action_required.TabIndex = 21;
@@ -408,6 +397,7 @@ namespace VirusGuard
             guna2Button3.TabIndex = 20;
             guna2Button3.Text = "Settings";
             guna2Button3.TextAlign = HorizontalAlignment.Left;
+            guna2Button3.Click += guna2Button3_Click;
             // 
             // guna2Panel3
             // 
@@ -443,6 +433,7 @@ namespace VirusGuard
             guna2Button2.TabIndex = 20;
             guna2Button2.Text = "History";
             guna2Button2.TextAlign = HorizontalAlignment.Left;
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2Panel2
             // 
@@ -495,7 +486,6 @@ namespace VirusGuard
             Controls.Add(guna2TileButton1);
             Controls.Add(guna2TileButton3);
             Controls.Add(label2);
-            Controls.Add(button1);
             Controls.Add(btnStop);
             Controls.Add(clear);
             Controls.Add(btnToggleRealTime);
@@ -504,6 +494,7 @@ namespace VirusGuard
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = resources.GetString("$this.Text");
             Load += Form1_Load;
             guna2Panel1.ResumeLayout(false);
@@ -521,7 +512,6 @@ namespace VirusGuard
         private Button btnToggleRealTime;
         private Button clear;
         private Button btnStop;
-        private Button button1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton3;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;

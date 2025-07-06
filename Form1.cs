@@ -572,5 +572,17 @@ namespace VirusGuard
         {
 
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Form2 form02 = new Form2(this);
+            form02.Show();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Setting setting = new Setting();
+            setting.Show();
+        }
     }
 }
