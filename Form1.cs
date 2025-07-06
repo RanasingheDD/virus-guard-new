@@ -14,7 +14,7 @@ namespace VirusGuard
         private CancellationTokenSource scanCancellationTokenSource;
         private ManagementEventWatcher usbWatcher;
         public static List<VirusLog> DetectedLogs = new List<VirusLog>();
-       public Label ActionLabel => action_required;
+        public Label ActionLabel => action_required;
 
         public class VirusLog
         {
@@ -423,7 +423,8 @@ namespace VirusGuard
                     label3.Visible = true;
 
                 }));
-                if (DetectedLogs.Count > 0) {
+                if (DetectedLogs.Count > 0)
+                {
                     action_required.Visible = true;
                 }
                 MessageBox.Show($"Scan completed.\nThreats found: {threatCount}", "Scan Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -518,7 +519,8 @@ namespace VirusGuard
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            if (DetectedLogs.Count > 0) {
+            if (DetectedLogs.Count > 0)
+            {
                 action_required.Visible = true;
             }
 
@@ -562,6 +564,11 @@ namespace VirusGuard
         }
 
         private void action_required_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
