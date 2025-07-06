@@ -52,6 +52,12 @@ namespace VirusGuard
                         guna2CheckBox2.Checked = bool.Parse(lines[0]);
                         guna2ToggleSwitch1.Checked = bool.Parse(lines[1]);
                         guna2DateTimePicker1.Value = DateTime.Parse(lines[2]);
+                        guna2DateTimePicker2.Value = DateTime.Parse(lines[3]);
+                        guna2ToggleSwitch2.Checked = bool.Parse((string)lines[4]);
+                        guna2ToggleSwitch3.Checked = bool.Parse((string)lines[5]);
+                        guna2ToggleSwitch4.Checked = bool.Parse((string)lines[6]);
+                        guna2CheckBox1.Checked = bool.Parse((string)lines[7]);
+
                     }
                 }
                 catch (Exception ex)
@@ -177,10 +183,78 @@ namespace VirusGuard
                 writer.WriteLine(guna2CheckBox2.Checked);         // sound checkbox
                 writer.WriteLine(guna2ToggleSwitch1.Checked);     // startup
                 writer.WriteLine(guna2DateTimePicker1.Value);     // datetime
+                writer.WriteLine(guna2DateTimePicker2.Value);
+                writer.WriteLine(guna2ToggleSwitch2.Checked);
+                writer.WriteLine(guna2ToggleSwitch3.Checked);
+                writer.WriteLine(guna2ToggleSwitch4.Checked);
+                writer.WriteLine(guna2CheckBox1.Checked);
             }
 
             MessageBox.Show("Settings saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void guna2ToggleSwitch2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ToggleSwitch4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ToggleSwitch3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            string path = "settings.txt";
+            if (File.Exists(path))
+            {
+                try
+                {
+                    string[] lines = File.ReadAllLines(path);
+                    if (lines.Length >= 3)
+                    {
+                        guna2CheckBox2.Checked = false;
+                        guna2ToggleSwitch1.Checked = false;
+                        guna2DateTimePicker1.Value = DateTime.Now;
+                        guna2DateTimePicker2.Value = DateTime.Now;
+                        guna2ToggleSwitch2.Checked = false;
+                        guna2ToggleSwitch3.Checked = false;
+                        guna2ToggleSwitch4.Checked = false;
+                        guna2CheckBox1.Checked = false;
+
+                    }
+                    using (StreamWriter writer = new StreamWriter(path))
+                    {
+                        writer.WriteLine(guna2CheckBox2.Checked);         // sound checkbox
+                        writer.WriteLine(guna2ToggleSwitch1.Checked);     // startup
+                        writer.WriteLine(guna2DateTimePicker1.Value);     // datetime
+                        writer.WriteLine(guna2DateTimePicker2.Value);
+                        writer.WriteLine(guna2ToggleSwitch2.Checked);
+                        writer.WriteLine(guna2ToggleSwitch3.Checked);
+                        writer.WriteLine(guna2ToggleSwitch4.Checked);
+                        writer.WriteLine(guna2CheckBox1.Checked);
+                    }
+                }
+                catch (Exception ex)
+                {
+                   // MessageBox.Show("Failed to load settings:\n" + ex.Message);
+                }
+            }
+        }
     }
 }

@@ -116,6 +116,7 @@
             guna2CheckBox1.UncheckedState.BorderRadius = 0;
             guna2CheckBox1.UncheckedState.BorderThickness = 0;
             guna2CheckBox1.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            guna2CheckBox1.CheckedChanged += guna2CheckBox1_CheckedChanged;
             // 
             // guna2ToggleSwitch4
             // 
@@ -133,6 +134,7 @@
             guna2ToggleSwitch4.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             guna2ToggleSwitch4.UncheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch4.UncheckedState.InnerColor = Color.White;
+            guna2ToggleSwitch4.CheckedChanged += guna2ToggleSwitch4_CheckedChanged;
             // 
             // label6
             // 
@@ -176,6 +178,7 @@
             guna2DateTimePicker2.Size = new Size(174, 34);
             guna2DateTimePicker2.TabIndex = 12;
             guna2DateTimePicker2.Value = new DateTime(2025, 7, 5, 18, 19, 25, 370);
+            guna2DateTimePicker2.ValueChanged += guna2DateTimePicker2_ValueChanged;
             // 
             // label4
             // 
@@ -234,6 +237,7 @@
             guna2ToggleSwitch2.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             guna2ToggleSwitch2.UncheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch2.UncheckedState.InnerColor = Color.White;
+            guna2ToggleSwitch2.CheckedChanged += guna2ToggleSwitch2_CheckedChanged;
             // 
             // label2
             // 
@@ -310,6 +314,7 @@
             guna2Button7.Size = new Size(180, 45);
             guna2Button7.TabIndex = 21;
             guna2Button7.Text = "Set as Default";
+            guna2Button7.Click += guna2Button7_Click;
             // 
             // label7
             // 
@@ -338,6 +343,7 @@
             guna2ToggleSwitch3.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             guna2ToggleSwitch3.UncheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch3.UncheckedState.InnerColor = Color.White;
+            guna2ToggleSwitch3.CheckedChanged += guna2ToggleSwitch3_CheckedChanged;
             // 
             // label5
             // 

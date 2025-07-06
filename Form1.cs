@@ -34,7 +34,7 @@ namespace VirusGuard
         public Form1(Setting setting)
         {
             InitializeComponent();
-            this.setting = setting;
+            //this.setting = setting;
             btnToggleRealTime.Click += btnToggleRealTime_Click;
             guna2TileButton1.Click += btnQuickScan_Click;
             guna2TileButton3.Click += btnCustomScan_Click;
@@ -398,10 +398,7 @@ namespace VirusGuard
                         {
                             threatCount++;
                             //action_required.Visible = true;
-                            if (setting.sound.Checked)
-                            {
-                                PlayAlertSound();
-                            }
+                            
                         }
 
                         scannedFiles++;
