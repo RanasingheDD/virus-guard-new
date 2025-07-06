@@ -1,17 +1,24 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace VirusGuard
 {
     public partial class Setting : Form
     {
+
+        public CheckBox sound => guna2CheckBox2;
+
         public Setting()
         {
             InitializeComponent();
@@ -100,9 +107,38 @@ namespace VirusGuard
             ;
         }
 
+        private void SetStartup(bool enable)
+        {
+            string appName = "VirusGuard"; // Name you want in startup registry
+            string exePath = Application.ExecutablePath;
+
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
+
+            if (enable)
+            {
+                key.SetValue(appName, exePath); // Add app to startup
+            }
+            else
+            {
+                if (key.GetValue(appName) != null)
+                    key.DeleteValue(appName); // Remove app from startup
+            }
+        }
+
+
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            SetStartup(guna2ToggleSwitch1.Checked);
         }
     }
 }

@@ -28,29 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
             guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             guna2ToggleSwitch4 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             label6 = new Label();
-            guna2ToggleSwitch3 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            label5 = new Label();
             groupBox1 = new GroupBox();
             guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label4 = new Label();
@@ -63,6 +62,8 @@
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             label7 = new Label();
+            guna2ToggleSwitch3 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -122,10 +123,10 @@
             guna2ToggleSwitch4.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             guna2ToggleSwitch4.CheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch4.CheckedState.InnerColor = Color.White;
-            guna2ToggleSwitch4.CustomizableEdges = customizableEdges17;
+            guna2ToggleSwitch4.CustomizableEdges = customizableEdges1;
             guna2ToggleSwitch4.Location = new Point(599, 145);
             guna2ToggleSwitch4.Name = "guna2ToggleSwitch4";
-            guna2ToggleSwitch4.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2ToggleSwitch4.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ToggleSwitch4.Size = new Size(44, 19);
             guna2ToggleSwitch4.TabIndex = 13;
             guna2ToggleSwitch4.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -143,34 +144,6 @@
             label6.Size = new Size(111, 20);
             label6.TabIndex = 12;
             label6.Text = "Auto Update";
-            // 
-            // guna2ToggleSwitch3
-            // 
-            guna2ToggleSwitch3.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ToggleSwitch3.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
-            guna2ToggleSwitch3.CheckedState.InnerBorderColor = Color.White;
-            guna2ToggleSwitch3.CheckedState.InnerColor = Color.White;
-            guna2ToggleSwitch3.CustomizableEdges = customizableEdges19;
-            guna2ToggleSwitch3.Location = new Point(599, 192);
-            guna2ToggleSwitch3.Name = "guna2ToggleSwitch3";
-            guna2ToggleSwitch3.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2ToggleSwitch3.Size = new Size(44, 19);
-            guna2ToggleSwitch3.TabIndex = 11;
-            guna2ToggleSwitch3.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
-            guna2ToggleSwitch3.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
-            guna2ToggleSwitch3.UncheckedState.InnerBorderColor = Color.White;
-            guna2ToggleSwitch3.UncheckedState.InnerColor = Color.White;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Snow;
-            label5.Location = new Point(139, 192);
-            label5.Name = "label5";
-            label5.Size = new Size(63, 20);
-            label5.TabIndex = 10;
-            label5.Text = "Theme";
             // 
             // groupBox1
             // 
@@ -191,7 +164,7 @@
             // guna2DateTimePicker2
             // 
             guna2DateTimePicker2.Checked = true;
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges21;
+            guna2DateTimePicker2.CustomizableEdges = customizableEdges3;
             guna2DateTimePicker2.FillColor = Color.FromArgb(10, 149, 0);
             guna2DateTimePicker2.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker2.Format = DateTimePickerFormat.Time;
@@ -199,7 +172,7 @@
             guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2DateTimePicker2.Size = new Size(174, 34);
             guna2DateTimePicker2.TabIndex = 12;
             guna2DateTimePicker2.Value = new DateTime(2025, 7, 5, 18, 19, 25, 370);
@@ -230,7 +203,7 @@
             // guna2DateTimePicker1
             // 
             guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges23;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges5;
             guna2DateTimePicker1.FillColor = Color.FromArgb(10, 149, 0);
             guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
             guna2DateTimePicker1.Format = DateTimePickerFormat.Time;
@@ -239,7 +212,7 @@
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             guna2DateTimePicker1.ShadowDecoration.BorderRadius = 12;
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2DateTimePicker1.Size = new Size(174, 34);
             guna2DateTimePicker1.TabIndex = 8;
             guna2DateTimePicker1.Value = new DateTime(2025, 7, 5, 18, 19, 25, 370);
@@ -251,10 +224,10 @@
             guna2ToggleSwitch2.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             guna2ToggleSwitch2.CheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch2.CheckedState.InnerColor = Color.White;
-            guna2ToggleSwitch2.CustomizableEdges = customizableEdges25;
+            guna2ToggleSwitch2.CustomizableEdges = customizableEdges7;
             guna2ToggleSwitch2.Location = new Point(599, 93);
             guna2ToggleSwitch2.Name = "guna2ToggleSwitch2";
-            guna2ToggleSwitch2.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2ToggleSwitch2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2ToggleSwitch2.Size = new Size(44, 19);
             guna2ToggleSwitch2.TabIndex = 7;
             guna2ToggleSwitch2.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -279,16 +252,17 @@
             guna2ToggleSwitch1.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             guna2ToggleSwitch1.CheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch1.CheckedState.InnerColor = Color.White;
-            guna2ToggleSwitch1.CustomizableEdges = customizableEdges27;
+            guna2ToggleSwitch1.CustomizableEdges = customizableEdges9;
             guna2ToggleSwitch1.Location = new Point(599, 48);
             guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            guna2ToggleSwitch1.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2ToggleSwitch1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2ToggleSwitch1.Size = new Size(44, 19);
             guna2ToggleSwitch1.TabIndex = 4;
             guna2ToggleSwitch1.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
             guna2ToggleSwitch1.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             guna2ToggleSwitch1.UncheckedState.InnerBorderColor = Color.White;
             guna2ToggleSwitch1.UncheckedState.InnerColor = Color.White;
+            guna2ToggleSwitch1.CheckedChanged += guna2ToggleSwitch1_CheckedChanged_1;
             // 
             // label1
             // 
@@ -304,7 +278,7 @@
             // 
             // guna2Button6
             // 
-            guna2Button6.CustomizableEdges = customizableEdges29;
+            guna2Button6.CustomizableEdges = customizableEdges11;
             guna2Button6.DisabledState.BorderColor = Color.DarkGray;
             guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button6.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -314,14 +288,14 @@
             guna2Button6.ForeColor = Color.White;
             guna2Button6.Location = new Point(136, 464);
             guna2Button6.Name = "guna2Button6";
-            guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Button6.Size = new Size(180, 45);
             guna2Button6.TabIndex = 20;
             guna2Button6.Text = "SAVE";
             // 
             // guna2Button7
             // 
-            guna2Button7.CustomizableEdges = customizableEdges31;
+            guna2Button7.CustomizableEdges = customizableEdges13;
             guna2Button7.DisabledState.BorderColor = Color.DarkGray;
             guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button7.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -331,10 +305,10 @@
             guna2Button7.ForeColor = Color.White;
             guna2Button7.Location = new Point(463, 464);
             guna2Button7.Name = "guna2Button7";
-            guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            guna2Button7.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Button7.Size = new Size(180, 45);
             guna2Button7.TabIndex = 21;
-            guna2Button7.Text = "RESET";
+            guna2Button7.Text = "Set as Default";
             // 
             // label7
             // 
@@ -346,6 +320,34 @@
             label7.Size = new Size(80, 23);
             label7.TabIndex = 22;
             label7.Text = "Settings";
+            // 
+            // guna2ToggleSwitch3
+            // 
+            guna2ToggleSwitch3.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2ToggleSwitch3.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            guna2ToggleSwitch3.CheckedState.InnerBorderColor = Color.White;
+            guna2ToggleSwitch3.CheckedState.InnerColor = Color.White;
+            guna2ToggleSwitch3.CustomizableEdges = customizableEdges15;
+            guna2ToggleSwitch3.Location = new Point(599, 192);
+            guna2ToggleSwitch3.Name = "guna2ToggleSwitch3";
+            guna2ToggleSwitch3.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2ToggleSwitch3.Size = new Size(44, 19);
+            guna2ToggleSwitch3.TabIndex = 11;
+            guna2ToggleSwitch3.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            guna2ToggleSwitch3.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            guna2ToggleSwitch3.UncheckedState.InnerBorderColor = Color.White;
+            guna2ToggleSwitch3.UncheckedState.InnerColor = Color.White;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Snow;
+            label5.Location = new Point(139, 192);
+            label5.Name = "label5";
+            label5.Size = new Size(63, 20);
+            label5.TabIndex = 10;
+            label5.Text = "Theme";
             // 
             // Setting
             // 
@@ -368,9 +370,10 @@
             Controls.Add(label6);
             Controls.Add(guna2ToggleSwitch2);
             Controls.Add(label5);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Setting";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Setting";
+            Text = "Settings";
             Load += Setting_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -390,13 +393,13 @@
         private Label label4;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch4;
         private Label label6;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch3;
-        private Label label5;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Label label7;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch3;
+        private Label label5;
     }
 }

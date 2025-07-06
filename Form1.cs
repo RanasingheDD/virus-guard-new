@@ -1,6 +1,8 @@
+using Guna.UI2.WinForms;
 using Microsoft.ReportingServices.Interfaces;
 using System.Data.SqlClient;
 using System.Management;
+using System.Media;
 using System.Security.Cryptography;
 using System.Security.Principal;
 
@@ -8,6 +10,8 @@ namespace VirusGuard
 {
     public partial class Form1 : Form
     {
+        private Setting setting;
+
         private NotifyIcon notifyIcon1;
         private FileSystemWatcher realTimeWatcher;
         private bool realTimeEnabled = false;
@@ -27,9 +31,10 @@ namespace VirusGuard
 
         private readonly HashSet<string> knownMalwareHashes = new HashSet<string>();
 
-        public Form1()
+        public Form1(Setting setting)
         {
             InitializeComponent();
+            this.setting = setting;
             btnToggleRealTime.Click += btnToggleRealTime_Click;
             guna2TileButton1.Click += btnQuickScan_Click;
             guna2TileButton3.Click += btnCustomScan_Click;
@@ -49,7 +54,13 @@ namespace VirusGuard
             });
 
         }
-
+        private void PlayAlertSound()
+        {
+            SystemSounds.Exclamation.Play();  // plays Windows exclamation sound
+                                              // Alternatively, use a custom sound file:
+                                              // SoundPlayer player = new SoundPlayer("path_to_your_alert.wav");
+                                              // player.Play();
+        }
         private void StartUSBMonitoring()
         {
             try
@@ -387,6 +398,10 @@ namespace VirusGuard
                         {
                             threatCount++;
                             //action_required.Visible = true;
+                            if (setting.sound.Checked)
+                            {
+                                PlayAlertSound();
+                            }
                         }
 
                         scannedFiles++;
