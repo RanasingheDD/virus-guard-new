@@ -133,6 +133,7 @@ namespace VirusGuard
                 }
 
                 SafeAppendText("[INFO] Malware hashes loaded from VirusDB.\n");
+                
             }
             catch (Exception ex)
             {
