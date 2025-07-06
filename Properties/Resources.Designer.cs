@@ -63,6 +63,16 @@ namespace VirusGuard.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_faq_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-faq-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_hamburger_menu_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-hamburger-menu-50", resourceCulture);
@@ -106,6 +116,16 @@ namespace VirusGuard.Properties {
         internal static System.Drawing.Bitmap icons8_setting_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-setting-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Leonardo_Phoenix_10_Create_an_image_for_antivirus_software_tha_2 {
+            get {
+                object obj = ResourceManager.GetObject("Leonardo_Phoenix_10_Create_an_image_for_antivirus_software_tha_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VirusGuard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61c3bb34736f90de165f46ace25e799971020e84")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26e20a13b8538a06f9af4d7efc1abf676b1de537")]
 [assembly: System.Reflection.AssemblyProductAttribute("VirusGuard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VirusGuard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
