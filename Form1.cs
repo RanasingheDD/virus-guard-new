@@ -44,15 +44,6 @@ namespace VirusGuard
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             StartUSBMonitoring();
-
-            DetectedLogs.Add(new VirusLog
-            {
-                ScanType = "Quick Scan",
-                FilePath = "C:\\Users\\Dell\\Desktop\\test.txt",
-                DetectionType = "Trojan",
-                Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
-            });
-
         }
         private void PlayAlertSound()
         {
