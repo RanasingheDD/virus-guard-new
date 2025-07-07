@@ -25,11 +25,12 @@ namespace VirusGuard
             public string ScanType { get; set; }
             public string FilePath { get; set; }
             public string DetectionType { get; set; } // e.g., "Heuristic", "Hash Match"
-            public string Date { get; set; }
+            public string DetectionDate { get; set; }
         }
 
+     
+        private readonly Dictionary<string, string> knownMalwareHashes = new Dictionary<string, string>();
 
-        private readonly HashSet<string> knownMalwareHashes = new HashSet<string>();
 
         public Form1(Setting setting)
         {
@@ -109,9 +110,9 @@ namespace VirusGuard
         }
         private void LoadMalwareHashesFromDB()
         {
-            string connectionString = "Data Source=192.168.8.115;Initial Catalog=VirusDB;Persist Security Info=True;User ID=SA;Password=Madushan2002@;";
+            string connectionString = "Data Source=192.168.40.136;Initial Catalog=VirusDB;Persist Security Info=True;User ID=SA;Password=Madushan2002@;";
 
-            string query = "SELECT hash FROM VirusTBL";
+            string query = "SELECT virus_name,hash FROM VirusTBL";
 
             try
             {
@@ -119,20 +120,24 @@ namespace VirusGuard
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     conn.Open();
+                    //MessageBox.Show("DB Connected");
+                    
+
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
+
                         while (reader.Read())
                         {
                             string hash = reader["hash"].ToString().ToLowerInvariant();
-                            if (!string.IsNullOrWhiteSpace(hash))
-                            {
-                                knownMalwareHashes.Add(hash);
-                            }
+                            string name = reader["virus_name"].ToString();
+
+                            if (!knownMalwareHashes.ContainsKey(hash))
+                                knownMalwareHashes[hash] = name;
                         }
                     }
                 }
 
-                SafeAppendText("[INFO] Malware hashes loaded from VirusDB.\n");
+                //SafeAppendText("[INFO] Malware hashes loaded from VirusDB.\n");
                 
             }
             catch (Exception ex)
@@ -227,19 +232,20 @@ namespace VirusGuard
         {
             try
             {
+                
                 if (File.Exists(filePath))
                 {
                     string hash = ComputeSHA256(filePath);
                     string detectionType = "";
-
-                    if (knownMalwareHashes.Contains(hash))
+                    
+                    if (knownMalwareHashes.TryGetValue(hash, out string virusName))
                     {
-                        detectionType = "Hash Match";
-                        SafeAppendText($"{prefix} Infected file detected (local hash match): {filePath}\n");
+                        detectionType = $"Hash Match - {virusName}";
+                        SafeAppendText($"{prefix} Infected file detected: {filePath} [Virus: {virusName}]\n");
                     }
                     else if (IsSuspicious(filePath))
                     {
-                        detectionType = "Heuristic";
+                        detectionType = "Heuristic - Suspicious File";
                         SafeAppendText($"{prefix} Suspicious file detected (heuristic): {filePath}\n");
                     }
 
@@ -250,17 +256,21 @@ namespace VirusGuard
                             ScanType = prefix,
                             FilePath = filePath,
                             DetectionType = detectionType,
-                            Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                            DetectionDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
                         });
 
                         return true;
                     }
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                SafeAppendText($"[ERROR] Scan failed for {filePath}: {ex.Message}\n");
+            }
 
             return false;
         }
+
 
 
 
@@ -312,7 +322,7 @@ namespace VirusGuard
         {
             int threatCount = 0;
 
-            progressBar1.Invoke(new Action(() =>
+            progressBar1.Invoke(() =>
             {
                 progressBar1.Value = 0;
                 clear.Visible = false;
@@ -326,10 +336,10 @@ namespace VirusGuard
                 guna2TileButton2.Visible = false;
                 guna2TileButton3.Visible = false;
                 label3.Visible = false;
-            }));
+            });
 
             label1.Visible = false;
-            scanCancellationTokenSource?.Cancel(); // cancel any existing scan
+            scanCancellationTokenSource?.Cancel();
             scanCancellationTokenSource = new CancellationTokenSource();
             CancellationToken token = scanCancellationTokenSource.Token;
 
@@ -342,10 +352,8 @@ namespace VirusGuard
             {
                 await Task.Run(() =>
                 {
-                    List<string> allFiles = new List<string>();
-
-                    // Manually walk directories to handle errors
-                    Queue<string> dirs = new Queue<string>();
+                    List<string> allFiles = new();
+                    Queue<string> dirs = new();
                     dirs.Enqueue(path);
 
                     while (dirs.Count > 0)
@@ -386,25 +394,19 @@ namespace VirusGuard
                             break;
                         }
 
-                        bool foundThreat = ScanFile(file, scanType);
-                        if (foundThreat)
-                        {
+                        if (ScanFile(file, scanType))
                             threatCount++;
-                            //action_required.Visible = true;
-
-                        }
 
                         scannedFiles++;
                         int progress = (int)((double)scannedFiles / totalFiles * 100);
                         UpdateProgressBar(progress);
 
-                        Thread.Sleep(50); // simulate scanning delay
+                        Thread.Sleep(50);
                     }
-
 
                     SafeAppendText($"\n{scanType} completed.\n");
                     SafeAppendText($"\n{scanType} completed. Threats found: {threatCount}\n");
-                    clear.Visible = true;
+                    clear.Invoke(() => clear.Visible = true);
 
                 }, token);
             }
@@ -415,7 +417,7 @@ namespace VirusGuard
             finally
             {
                 SetScanButtonsEnabled(true);
-                progressBar1.Invoke(new Action(() =>
+                progressBar1.Invoke(() =>
                 {
                     progressBar1.Visible = false;
                     progressBar1.Value = 0;
@@ -427,14 +429,14 @@ namespace VirusGuard
                     guna2TileButton2.Visible = true;
                     guna2TileButton3.Visible = true;
                     label3.Visible = true;
+                });
 
-                }));
                 if (DetectedLogs.Count > 0)
                 {
-                    action_required.Visible = true;
+                    action_required.Invoke(() => action_required.Visible = true);
                 }
-                MessageBox.Show($"Scan completed.\nThreats found: {threatCount}", "Scan Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                MessageBox.Show($"Scan completed.\nThreats found: {threatCount}", "Scan Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void SetScanButtonsEnabled(bool enabled)

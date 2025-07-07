@@ -321,7 +321,7 @@ namespace VirusGuard
             guna2Button5.FillColor = Color.FromArgb(10, 149, 0);
             guna2Button5.Font = new Font("Segoe UI", 9F);
             guna2Button5.ForeColor = Color.White;
-            guna2Button5.Image = Properties.Resources.Untitled_design__4_;
+            //guna2Button5.Image = Properties.Resources.Untitled_design__4_;
             guna2Button5.ImageSize = new Size(129, 97);
             guna2Button5.Location = new Point(0, 11);
             guna2Button5.Name = "guna2Button5";
