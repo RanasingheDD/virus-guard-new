@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Guna.UI2.WinForms;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace VirusGuard
             guna2DateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
 
-        private void LoadSettings()
+        public void LoadSettings()
         {
             guna2DateTimePicker1.Format = DateTimePickerFormat.Custom;
             guna2DateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
@@ -58,6 +59,15 @@ namespace VirusGuard
                         guna2ToggleSwitch4.Checked = bool.Parse((string)lines[6]);
                         guna2CheckBox1.Checked = bool.Parse((string)lines[7]);
 
+                    }
+
+                    if (guna2ToggleSwitch3.Checked)
+                    {
+                        ApplyDarkTheme();
+                    }
+                    else
+                    {
+                        ApplyLightTheme();
                     }
                 }
                 catch (Exception ex)
@@ -135,9 +145,7 @@ namespace VirusGuard
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            Setting setting = new Setting();
-            setting.Show();
-            ;
+            
         }
 
 
@@ -174,6 +182,50 @@ namespace VirusGuard
         {
             SetStartup(guna2ToggleSwitch1.Checked);
         }
+        private void ApplyDarkTheme()
+        {
+            Form1 darkform1 = new Form1(this);
+            //Form2 darkform2 = new Form2(darkform1);
+            guna2DateTimePicker1.FillColor = Color.FromArgb( 214, 180, 252);
+            guna2DateTimePicker2.FillColor = Color.FromArgb(214, 180, 252);
+            guna2Button6.FillColor = Color.FromArgb(214, 180, 252);
+            guna2Button7.FillColor = Color.FromArgb(214, 180, 252);
+            darkform1.guna2Panel1.FillColor = Color.FromArgb(214, 180, 252);
+            //darkform1.guna2Button5.FillColor = Color.FromArgb(214, 180, 252);
+            //darkform1.guna2Button1.FillColor = Color.FromArgb(214, 180, 252);
+            //darkform1.guna2Button2.FillColor = Color.FromArgb(214, 180, 252);
+            //darkform1.guna2Button3.FillColor = Color.FromArgb(214, 180, 252);
+            //darkform1.guna2Button4.FillColor = Color.FromArgb(214, 180, 252);
+            //darkform1.label1.ForeColor = Color.FromArgb(214, 180, 252);
+            //darkform1.btnToggleRealTime.BackColor = Color.FromArgb(214, 180, 252);
+            //darkform1.label3.ForeColor = Color.FromArgb(214, 180, 252);
+            //darkform2.label3.ForeColor = Color.FromArgb(214, 180, 252);
+            //darkform2.Delete.BackColor = Color.FromArgb(214, 180, 252);
+            //darkform2.Export.BackColor = Color.FromArgb(214, 180, 252);
+
+        }
+        private void ApplyLightTheme()
+        {
+            Form1 lightform1 = new Form1(this);
+            //Form2 lightform2 = new Form2(lightform1);
+            guna2DateTimePicker1.FillColor = Color.FromArgb(10, 149, 0);
+            guna2DateTimePicker2.FillColor = Color.FromArgb(10, 149, 0);
+            guna2Button6.FillColor = Color.FromArgb(10, 149, 0);
+            guna2Button7.FillColor = Color.FromArgb(10, 149, 0);
+            lightform1.guna2Panel1.FillColor = Color.FromArgb(10, 149, 0);
+            //lightform1.guna2Button5.FillColor = Color.FromArgb(10, 149, 0);
+            //lightform1.guna2Button1.FillColor = Color.FromArgb(10, 149, 0);
+            //lightform1.guna2Button2.FillColor = Color.FromArgb(10, 149, 0);
+            //lightform1.guna2Button3.FillColor = Color.FromArgb(10, 149, 0);
+            //lightform1.guna2Button4.FillColor = Color.FromArgb(10, 149, 0);
+            //lightform1.label1.ForeColor = Color.FromArgb(10, 149, 0);
+            //lightform1.btnToggleRealTime.BackColor = Color.FromArgb(10, 149, 0);
+            //lightform1.label3.ForeColor = Color.FromArgb(10, 149, 0);
+            //lightform2.label3.ForeColor = Color.FromArgb(10, 149, 0);
+            //lightform2.Delete.BackColor = Color.FromArgb(10, 149, 0);
+            //lightform2.Export.BackColor = Color.FromArgb(10, 149, 0);
+
+        }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
@@ -188,9 +240,22 @@ namespace VirusGuard
                 writer.WriteLine(guna2ToggleSwitch3.Checked);
                 writer.WriteLine(guna2ToggleSwitch4.Checked);
                 writer.WriteLine(guna2CheckBox1.Checked);
+
+
             }
 
             MessageBox.Show("Settings saved!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (guna2ToggleSwitch3.Checked)
+            {
+                ApplyDarkTheme();
+            }
+            else
+            {
+                ApplyLightTheme();
+            }
+
+
         }
 
         private void guna2ToggleSwitch2_CheckedChanged(object sender, EventArgs e)
